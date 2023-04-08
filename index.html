@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册页面</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.z01.com/bootstrap/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+</head>
+
+<body>
+<div class="head">
+    <div class="shouye_head">
+        <a href="main.html">世纪佳缘</a>
+    </div>
+</div>
+<div class="dowebok" id="dowebok">
+    <!-- 注册 -->
+    <div class="form-container sign-up">
+
+        <form action="<%=request.getContextPath() %>/register.do" method="post" class="register">
+            <h1>注册</h1>
+            <div>
+                <div class="dselect">
+                    <span>我是</span>
+                    <input  id="nan"  value="m"  type="radio" name="sex">
+                    <label class="sex nan" for="nan">男</label>
+                    <input  id="nv"  value="f"   type="radio" name="sex">
+                    <label class="sex nv" for="nv">女</label>
+                </div>
+            </div>
+
+            <div>
+                <span>生日</span>
+                <select style="width:80px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select" aria-label="Default select example">
+                    <option selected>请选择 年</option>
+                    <option value="1">1980</option><option value="2">1981</option><option value="3">1982</option><option value="1">1983</option><option value="2">1984</option><option value="3">1985</option><option value="1">1986</option><option value="2">1987</option><option value="3">1988</option><option value="1">1989</option>
+                    <option value="1">1990</option><option value="2">1991</option><option value="3">1992</option><option value="1">1993</option><option value="2">1994</option><option value="3">1995</option><option value="1">1996</option><option value="2">1997</option><option value="3">1998</option><option value="1">1999</option>
+                    <option value="1">2000</option><option value="2">2001</option><option value="3">2002</option><option value="1">2003</option><option value="2">2004</option><option value="3">2005</option>
+                </select>
+                <select style="width:80px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select ex-select" aria-label="Default select example">
+                    <option selected>请选择 月</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="1">4</option><option value="2">5</option><option value="3">6</option>
+                    <option value="1">7</option><option value="2">8</option><option value="3">9</option>
+                    <option value="1">10</option><option value="2">11</option><option value="2">12</option>
+                </select>
+                <select style="width:80px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select ex-select" aria-label="Default select example">
+                    <option selected>请选择 日</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="1">4</option><option value="2">5</option><option value="3">6</option>
+                    <option value="1">7</option><option value="2">8</option><option value="3">9</option>
+                    <option value="1">10</option><option value="2">11</option><option value="2">12</option>
+                    <option value="1">13</option><option value="2">14</option><option value="3">15</option>
+                    <option value="1">16</option><option value="2">17</option><option value="3">18</option>
+                    <option value="1">19</option><option value="2">20</option><option value="3">21</option>
+                    <option value="1">22</option><option value="2">23</option><option value="2">24</option>
+                    <option value="1">25</option><option value="2">26</option><option value="3">27</option>
+                    <option value="1">28</option><option value="2">29</option><option value="2">30</option><option value="2">31</option>
+                </select>
+            </div>
+            <div>
+                <span>常驻地</span>
+                <select style="width:270px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">北京市</option><option value="2">上海市</option><option value="3">广东</option><option value="1">天津市</option><option value="2">重庆市</option><option value="3">河北</option><option value="1">河南</option><option value="2">云南</option><option value="3">辽宁</option><option value="1">黑龙江</option>
+                    <option value="1">湖南</option><option value="2">安徽</option><option value="3">山东</option><option value="1">新疆</option><option value="2">江苏</option><option value="3">浙江</option><option value="1">江西</option><option value="2">湖北</option><option value="3">广西</option><option value="1">甘肃</option>
+                    <option value="1">山西</option><option value="2">内蒙古</option><option value="3">陕西</option><option value="1">吉林</option><option value="2">福建</option><option value="3">贵州</option><option value="1">青海</option><option value="2">西藏</option><option value="3">四川</option><option value="1">宁夏</option>
+                    <option value="1">海南</option><option value="2">香港</option><option value="3">澳门</option><option value="1">台湾</option>
+                </select>
+            </div>
+            <div>
+                <div class="dselect">
+                    <span>婚姻状况</span>
+                    <input value="1"   id="m-wh"  type="radio" name="marriage">
+                    <label class="marr" for="m-wh">未婚</label>
+                    <input  value="2"   id="m-ly"  type="radio" name="marriage">
+                    <label class="marr" for="m-ly">离异</label>
+                    <input value="3"    id="m-so"  type="radio" name="marriage">
+                    <label class="marr" for="m-so">丧偶</label>
+                </div>
+            </div>
+
+            <div>
+                <span>学历</span>
+                <select style="width:270px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">博士</option><option value="2">硕士</option><option value="3">双学士</option>
+                    <option value="1">本科</option><option value="2">专科</option><option value="3">高中</option>
+                    <option value="1">中专初中及以下</option><
+                </select>
+            </div>
+            <div>
+                <span>月薪</span>
+                <select style="width:270px;height:36px;margin-top:8px;margin-bottom: 8px;" class="form-select" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">50000元以上</option><option value="2">20000-50000元</option><option value="3">10000-20000元</option>
+                    <option value="1">5000-10000元</option><option value="2">2000-5000元</option><option value="3">2000元以下</option>
+                </select>
+            </div>
+            <div>
+                <span>手机号</span>
+                <input type="text"  id="user_id" name="user_id" placeholder="手机号" />
+            </div>
+            <div>
+                <span>验证码</span>
+                <input name="txtCheckCode" type="text" id="txtCheckCode"
+                       placeholder="验证码" class="captcha_input">
+
+            </div>
+            <div>
+                <span>密码</span>
+                <input type="password" id="pwd" name="password" placeholder="请输入密码" />
+            </div>
+            <div>
+                <span>确认密码</span>
+                <input type="password" id="second_pwd" name="second_pwd" placeholder="请再次输入密码" />
+            </div>
+            <div>
+                <span>手机号码</span>
+                <input type="text" id="phone" name="phone" placeholder="手机号码" />
+            </div>
+            <div>
+                <span>昵称</span>
+                <input type="text"  id="username" name="username" placeholder="请输入用户名" />
+            </div>
+
+
+            <button>注册</button>
+        </form>
+    </div>
+    <!-- 登录 -->
+    <div class="form-container sign-in">
+        <form action="login.do" method="post" class="sign">
+            <h1>登录</h1>
+            <div>
+                <span>账号</span>
+                <input type="text" name="user_id" placeholder="账号">
+            </div>
+            <div>
+                <span>账号</span>
+                <input type="password"  name="password" placeholder="密码">
+            </div>
+            <a href="###">忘记密码？</a>
+            <button>登录</button>
+        </form>
+    </div>
+
+    <!-- 两边的蒙版 -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <!-- 登录蒙版 -->
+            <div class="overlay-panel mask-left">
+                <h1>已有帐号？</h1>
+                <p>请使用您的帐号进行登录</p>
+                <button class="ghost" id="signIn">登录</button>
+            </div>
+            <!-- 注册蒙版 -->
+            <div class="overlay-panel mask-right">
+                <h1>没有帐号？</h1>
+                <p>立即注册，找到另一半成功的第一步</p>
+                <button class="ghost" id="signUp">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <p>
+        <br/>
+        Copyright ©版权所有：卢海深　　　地址：中华人民共和国 　广东省 　湛江市 　麻章区 　海大路1号 　　邮编：524088
+        <br/>
+        <br/>
+        指导老师：段兴　　　理论支持：段兴　　　开发人员：卢海深　　　测试人员：卢海深　　　评分人员：段兴
+    </p>
+</div><!-- /footer -->
+</body>
+
+</html>
